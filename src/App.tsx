@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Github, Linkedin, Mail, Moon, Sun, Check, ExternalLink, ChevronDown, Database, BarChart3, Brain, X } from 'lucide-react';
 
 function App() {
@@ -12,6 +12,15 @@ function App() {
     email: '',
     message: ''
   });
+
+  // Ensure page always starts at the top on load/refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // Clear any hash from URL
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname);
+    }
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -329,7 +338,7 @@ Type 'help' for available commands.`;
         darkMode ? 'bg-[#1e1e1e]/80 backdrop-blur-md' : 'bg-white/80 backdrop-blur-md'
       }`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-xl font-bold">DHEEPAK KARAN ES</div>
+          <div className="text-xl font-bold">DK</div>
           <div className="flex items-center gap-6">
             <button 
               onClick={() => scrollToSection('hero')}
