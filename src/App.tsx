@@ -364,7 +364,7 @@ Type 'help' for available commands.`;
                     <div className="flex justify-end">
             <div className="relative">
               <img 
-                src="/marcus-portrait.png"
+                src="/lalalei/marcus-portrait.png"
                 alt="Marcus Rodriguez - Data Scientist"
                 className="w-[24rem] h-[24rem] lg:w-[32rem] lg:h-[32rem] object-contain rounded-full"
               />
@@ -630,7 +630,7 @@ Type 'help' for available commands.`;
               <Mail className="w-5 h-5" />
             </a>
             <button 
-              onClick={() => window.open('/resume.pdf', '_blank')}
+              onClick={() => window.open('/lalalei/resume.pdf', '_blank')}
               className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 transform hover:scale-105 ${
                 darkMode 
                   ? 'bg-white text-gray-900 hover:bg-gray-200' 
