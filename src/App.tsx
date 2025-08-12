@@ -324,22 +324,53 @@ Type 'help' for available commands.`;
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-[#1e1e1e] text-white' : 'bg-white text-gray-900'}`}>
-      {/* Theme Toggle */}
-      <button
-        onClick={() => setDarkMode(!darkMode)}
-        className={`fixed top-0 right-0 z-50 w-12 h-12 rounded-bl-full transition-all duration-300 ${
-          darkMode 
-            ? 'bg-white/10 hover:bg-white/20' 
-            : 'bg-gray-900/10 hover:bg-gray-900/20'
-        }`}
-      >
-        <div className="flex items-center justify-center h-full">
-          {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+      {/* Navigation Menu */}
+      <nav className={`fixed top-0 left-0 right-0 z-40 px-4 py-4 transition-all duration-300 ${
+        darkMode ? 'bg-[#1e1e1e]/80 backdrop-blur-md' : 'bg-white/80 backdrop-blur-md'
+      }`}>
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="text-xl font-bold">DHEEPAK KARAN ES</div>
+          <div className="flex items-center gap-6">
+            <button 
+              onClick={() => scrollToSection('hero')}
+              className={`transition-all duration-300 hover:scale-105 ${
+                darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Home
+            </button>
+            <button 
+              onClick={() => scrollToSection('projects')}
+              className={`transition-all duration-300 hover:scale-105 ${
+                darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Projects
+            </button>
+            <button 
+              onClick={() => scrollToSection('terminal')}
+              className={`transition-all duration-300 hover:scale-105 ${
+                darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
+              }`}
+            >
+              Terminal
+            </button>
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className={`p-2 rounded-full transition-all duration-300 ${
+                darkMode 
+                  ? 'bg-white/10 hover:bg-white/20' 
+                  : 'bg-gray-900/10 hover:bg-gray-900/20'
+              }`}
+            >
+              {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+            </button>
+          </div>
         </div>
-      </button>
+      </nav>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center px-4">
+      <section id="hero" className="min-h-screen flex items-center justify-center px-4">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
           <div className="text-center space-y-4">
             <h1 className="text-4xl md:text-6xl font-bold mb-2 leading-tight">
