@@ -334,15 +334,15 @@ Type 'help' for available commands.`;
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-[#1e1e1e] text-white' : 'bg-white text-gray-900'}`}>
       {/* Navigation Menu */}
-      <nav className={`fixed top-0 left-0 right-0 z-40 px-4 py-3 transition-all duration-300 ${
-        darkMode ? 'bg-[#1e1e1e]/90 backdrop-blur-md' : 'bg-white/90 backdrop-blur-md'
+      <nav className={`fixed top-0 left-0 right-0 z-40 px-4 py-4 transition-all duration-300 ${
+        darkMode ? 'bg-[#1e1e1e]/80 backdrop-blur-md' : 'bg-white/80 backdrop-blur-md'
       }`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="text-lg font-bold">DK</div>
-          <div className="flex items-center gap-4 md:gap-6">
+          <div className="text-xl font-bold">DK</div>
+          <div className="flex items-center gap-6">
             <button 
               onClick={() => scrollToSection('hero')}
-              className={`text-sm md:text-base transition-all duration-300 hover:scale-105 ${
+              className={`transition-all duration-300 hover:scale-105 ${
                 darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -350,7 +350,7 @@ Type 'help' for available commands.`;
             </button>
             <button 
               onClick={() => scrollToSection('projects')}
-              className={`text-sm md:text-base transition-all duration-300 hover:scale-105 ${
+              className={`transition-all duration-300 hover:scale-105 ${
                 darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -358,7 +358,7 @@ Type 'help' for available commands.`;
             </button>
             <button 
               onClick={() => scrollToSection('terminal')}
-              className={`text-sm md:text-base transition-all duration-300 hover:scale-105 ${
+              className={`transition-all duration-300 hover:scale-105 ${
                 darkMode ? 'text-gray-300 hover:text-white' : 'text-gray-600 hover:text-gray-900'
               }`}
             >
@@ -379,21 +379,21 @@ Type 'help' for available commands.`;
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen flex items-center justify-center px-4 pt-20">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-          <div className="text-center space-y-4 order-2 lg:order-1">
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-2 leading-tight">
+      <section id="hero" className="min-h-screen flex items-center justify-center px-4">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+          <div className="text-center space-y-4">
+            <h1 className="text-4xl md:text-6xl font-bold mb-2 leading-tight">
               DHEEPAK
               <br />
               KARAN ES
             </h1>
-            <h2 className="text-lg md:text-xl lg:text-3xl mb-4 tracking-wide font-light">
+            <h2 className="text-xl md:text-2xl lg:text-3xl mb-4 tracking-wide font-light">
               <span className={darkMode ? 'text-gray-300' : 'text-gray-600'}>
                 AI ENGINEER
               </span>
             </h2>
             
-            <p className={`text-base md:text-lg mb-4 leading-relaxed max-w-lg font-light ${
+            <p className={`text-lg mb-4 leading-relaxed max-w-lg font-light ${
               darkMode ? 'text-gray-300' : 'text-gray-600'
             }`}>
               Data-driven professional skilled in analytics, 
@@ -401,12 +401,12 @@ Type 'help' for available commands.`;
             </p>
           </div>
 
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
+                    <div className="flex justify-end">
             <div className="relative">
               <img 
                 src="/lalalei/marcus-portrait.png"
                 alt="Marcus Rodriguez - Data Scientist"
-                className="w-48 h-48 md:w-64 md:h-64 lg:w-[32rem] lg:h-[32rem] object-contain rounded-full"
+                className="w-[24rem] h-[24rem] lg:w-[32rem] lg:h-[32rem] object-contain rounded-full"
               />
             </div>
           </div>
