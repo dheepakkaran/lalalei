@@ -43,7 +43,7 @@ npm run build
 
 ## 🌐 Live Demo
 
-Visit: [Your GitHub Pages URL will appear here after deployment]
+Visit: [https://dheepakkaran.github.io/lalalei/]
 
 ## 📧 Contact
 
